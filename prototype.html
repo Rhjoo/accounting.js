@@ -1,0 +1,41 @@
+<!doctype = html>
+<html>
+<head>
+
+</head>
+
+
+<body>
+  <script>
+  var dog = {
+    fetch: function() {
+      console.log('fetch');
+    }
+  };
+
+  var myDog = Object.create(dog);
+  myDog.name = 'Happy';
+
+  var randomDog = Object.create(dog);
+  randomDog.name = 'Hey';
+
+  console.log(Object.getPrototypeOf(myDog));  //dog
+  console.log(Object.getPrototypeOf(randomDog));  //dog
+
+
+  // Constructors
+
+  function Dog(name) {
+    this.name = name;
+    this.fetch = function() {
+    console.log('fetch');
+    }
+  };
+
+  var testDog = new Dog('Hmmm');
+  console.log(Object.getPrototypeOf(testDog));  //Dog.prototype
+
+  </script>
+
+</body>
+</html>

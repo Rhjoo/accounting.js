@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <p>
+    Some content
+    <div>
+      Some other content
+      <div>
+         Another content
+      </div>
+    </div>
+  </p>
+
+  <script>
+    function logEachChildElement(element) {
+      console.log(element);
+      if (document.children.length > 0) {
+        for (var i = 0; i < document.children.length; i++) {
+          logEachChildElement(element.children[i]);
+        }
+      } else {
+        return;
+      }
+    }
+  </script>
+</body>
+
+</html>

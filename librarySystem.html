@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  Trying different ways to load modules
+</head>
+  <script>
+  (function() {
+    var libraryStorage = {};
+
+    function librarySystem(libraryName, callbakc) {
+      if (arguments.length > 1) {
+        libraryStorage[libraryName] = callback();
+      } else {
+        return libraryStorage[libraryName];
+      }
+    }
+
+    window.librarySystem = librarySystem;
+  })();
+  </script>
+  <script src="librarySystem.js"></script>
+<body>
+</body>
+</html>
